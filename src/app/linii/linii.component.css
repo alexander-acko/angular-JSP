@@ -1,0 +1,82 @@
+.linii {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+}
+.linii li {
+  position: relative;
+  cursor: pointer;
+}
+
+.linii li:hover {
+  left: .1em;
+}
+
+.linii a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.8em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.linii a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.linii a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.linii .badge {
+  display: inline-block;
+  width: 20px;
+  font-size: small;
+  font-weight: bold;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #ce3d9d;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: center;
+  margin-right: .8em;
+  border-radius: 5px 0 0 5px;
+}
+
+button.favorite {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.favorite:hover {
+  background-color: #525252;
+  color: white;
+}
+
+button.favorite-fill {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: red;
+  color:  white;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}

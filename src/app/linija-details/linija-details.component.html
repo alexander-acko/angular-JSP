@@ -1,0 +1,37 @@
+<div *ngIf="linija">
+  <div class="naslov">
+    <div class="logo-container">
+      <div class="gore"><img [src]="'assets/images/Bus_line.png'" alt="logo bus"/></div>
+      <div class="dolu">{{ linija.name | uppercase }}</div>
+    </div>
+    <div class="pocetok-kraj">
+      <div><img [src]="'assets/images/pocetna.png'" alt="logo pocetna" valign="middle"/> {{ linija.od }}</div>
+      <div><img [src]="'assets/images/krajna.png'" alt="logo krajna" valign="middle"/> {{ linija.do }}</div>
+    </div>
+    <div class="line-info">
+      <div><img [src]="'assets/images/duration.png'" alt="logo vremetraenje"/> &nbsp;{{ linija.vremetraenje }} min&nbsp;&nbsp;</div>
+      <div><img [src]="'assets/images/length.png'" alt="logo dolzina"/> &nbsp;{{ linija.dolzina }} km</div>
+    </div>
+  </div>
+  <p></p>
+  <div>Станици (вкупно {{ linija.br_stanici }} станици):</div>
+  <ul>
+    <div *ngFor="let stanica of linija.stanici">
+      <li class="station">{{ stanica.naziv }}</li>
+    </div>
+  </ul>
+
+  <div *ngIf="apiLoaded | async">
+    <google-map height="300px"
+                width="100%"
+                [center]="center"
+                [zoom]="zoom">
+      <map-marker *ngFor="let stanica of stanici"
+                  [position]="{lat: stanica.langitude, lng: stanica.longitude}"
+                  [title]="stanica.naziv"
+                  [options]="markerOptions"></map-marker>
+    </google-map>
+  </div>
+
+  <button type="button" (click)="goBack()">&lt;</button>
+</div>

@@ -1,0 +1,17 @@
+<h2>КОНТАКТ ИНФОРМАЦИИ</h2>
+<p>Јавно сообраќајно претпријатие - Скопје</p>
+<p>Адреса: бул. Александар Македонски бр. 10, Скопје - Република Северна Македонија</p>
+<p>Бесплатен телефонски број за Ваши забелешки и сугестии: 0 800 15-115</p>
+<h2>ЦЕНТРИ ЗА ПЕРСОНАЛИЗАЦИЈА</h2>
+<div *ngIf="apiLoaded | async">
+  <google-map height="300px"
+              width="100%"
+              [center]="center"
+              [zoom]="zoom">
+    <map-marker *ngFor="let marker of markers"
+                [position]="{lat: marker.lat, lng: marker.lng}"
+                [title]="marker.title"
+                [options]="markerOptions">
+    </map-marker>
+  </google-map>
+</div>

@@ -1,0 +1,14 @@
+<h2>Мои линии</h2>
+<div class="linii-menu">
+  <a *ngFor="let linija of linii"
+     routerLink="/detail/{{linija.broj}}">
+    {{linija.name}}
+  </a>
+</div>
+<h2>Мои станици</h2>
+<div class="stanici-menu">
+  <a *ngFor="let stanica of stanici"
+     routerLink="/Sdetail/{{stanica.broj}}">
+    {{stanica.naziv}}
+  </a>
+</div>

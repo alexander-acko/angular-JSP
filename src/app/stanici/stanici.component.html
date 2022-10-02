@@ -1,0 +1,13 @@
+<h2>Листа на станици</h2>
+<div>
+  <label name="labela">Пребарај станица: </label>
+  <input class="search-station" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Внеси број или назив на станица">
+</div>
+<ul class="stanici">
+  <li *ngFor="let stanica of stanici | filter:searchText">
+    <a routerLink="/Sdetail/{{stanica.broj}}">
+      <span class="badge">{{stanica.broj}}</span> {{stanica.naziv}}
+    </a>
+    <button type="button" class="{{ this.stanica.favorite ? 'favorite-fill' : 'favorite' }}" title="омилена" (click)="addFavorite(stanica)">+</button>
+  </li>
+</ul>

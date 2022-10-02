@@ -1,0 +1,95 @@
+.stanici {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+}
+.stanici li {
+  position: relative;
+  cursor: pointer;
+}
+
+.stanici li:hover {
+  left: .1em;
+}
+
+.stanici a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.8em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.stanici a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.stanici a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.stanici .badge {
+  display: inline-block;
+  width: 20px;
+  font-size: small;
+  font-weight: bold;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #3b901a;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: center;
+  margin-right: .8em;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-station {
+  margin: 8px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  background-image: url("/assets/images/searchicon.png");
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+button.favorite {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.favorite:hover {
+  background-color: #525252;
+  color: white;
+}
+
+button.favorite-fill {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: red;
+  color:  white;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}

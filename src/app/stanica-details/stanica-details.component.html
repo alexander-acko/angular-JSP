@@ -1,0 +1,30 @@
+<div *ngIf="stanica">
+  <div class="naslov">
+    <div class="logo-container">
+      <div class="gore"><img [src]="'assets/images/Logo_Blue_Bus.png'" alt="logo bus"/></div>
+      <div class="dolu">{{ stanica.broj }}</div>
+    </div>
+    <div class="pocetok-kraj">
+      <div> {{ stanica.naziv | uppercase }} </div>
+      <button type="button" class="favorite" name="favorite" (click)="addFavorite(stanica)">{{ this.stanica.favorite ? "Омилена станица" : "Додај во омилени" }}</button>
+    </div>
+    <div class="station-info">
+      <div><img [src]="'assets/images/map_icon.png'" alt="logo koordinati" valign="middle"/> &nbsp;{{ stanica.langitude }} ,&nbsp;&nbsp;{{ stanica.longitude }}</div>
+    </div>
+  </div>
+  <p><br>Линии кои поминуваат нив оваа станица: </p>
+  <div class="line-container">
+     <div class="line-list" *ngFor="let linija of linii">{{ linija }}</div>
+  </div>
+  <p></p>
+  <div *ngIf="apiLoaded | async">
+    <google-map height="300px"
+                width="100%"
+                [center]="center"
+                [zoom]="zoom">
+      <map-marker [position]="markerPosition"
+                  [options]="markerOptions"></map-marker>
+    </google-map>
+  </div>
+  <button type="button" (click)="goBack()">&lt;</button>
+</div>

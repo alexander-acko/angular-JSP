@@ -1,0 +1,80 @@
+/* LinijaDetailsComponent's private CSS styles */
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1.5em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  width: 50px;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+.station {
+  font-size: 0.75em;
+  color: gray;
+  padding: 0;
+}
+.naslov {
+  background: #ecafd2;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: row;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  background-color: #ce3d9d;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+.gore {
+  padding-top: 8px;
+  background-color: #8c447c;
+  border-radius: 10px 10px 0px 0px;
+}
+.dolu {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.pocetok-kraj {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  padding-left: 5px;
+  font-size: 1.18em;
+  font-weight: bold;
+  color: #862568;
+}
+.line-info {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  color: black;
+  padding-left: 5px;
+  font-weight: lighter;
+  font-size: 0.85em;
+  color: #862568;
+  padding: 5px;
+}

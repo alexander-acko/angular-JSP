@@ -1,0 +1,9 @@
+<h2>Листа на линии</h2>
+<ul class="linii">
+  <li *ngFor="let linija of linii">
+    <a routerLink="/detail/{{linija.broj}}">
+      <span class="badge">{{linija.broj}}</span> {{linija.od}} - {{linija.do}}
+    </a>
+    <button type="button" class="{{ this.linija.favorite ? 'favorite-fill' : 'favorite' }}" title="омилена" (click)="addFavorite(linija)">+</button>
+  </li>
+</ul>
